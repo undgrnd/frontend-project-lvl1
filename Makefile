@@ -6,3 +6,6 @@ start: ;@echo "Start"; \
 
 publish: ;@echo "Publish"; \
 	  npm publish --dry-run
+
+lint: ;@echo "Lint"; \
+    npx eslint .
