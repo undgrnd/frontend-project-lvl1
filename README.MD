@@ -4,4 +4,5 @@
 # Пример запуска
 
 GCD – https://asciinema.org/a/VjRJEMGiVmilwijEN93lVrkGy
+
 Progression – https://asciinema.org/a/isckvPpCFxrZaz8FlUIdzkRii
