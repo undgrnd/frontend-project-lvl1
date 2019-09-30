@@ -3,4 +3,5 @@
 
 # Пример запуска
 
-https://asciinema.org/a/fmpLd8oiWbWE3pU4R9eoVQROD
+GCD – https://asciinema.org/a/VjRJEMGiVmilwijEN93lVrkGy
+Progression – https://asciinema.org/a/isckvPpCFxrZaz8FlUIdzkRii
