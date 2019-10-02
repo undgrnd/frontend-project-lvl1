@@ -1,11 +1,8 @@
 install: ;@echo "Install"; \
-	  npm install
-
-saluteUser: ;@echo "Start"; \
-    npx babel-node src/bin/brain-games.js
+		npm install
 
 publish: ;@echo "Publish"; \
-	  npm publish
+		npm publish
 
 lint: ;@echo "Lint"; \
-    npx eslint .
+		npm run lint .
