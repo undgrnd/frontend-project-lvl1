@@ -2,7 +2,9 @@
   "name": "undgrnd-brain-games",
   "version": "3.0.1",
   "description": "Brain Games",
-  "keywords": ["js, hexlet, project"],
+  "keywords": [
+    "js, hexlet, project"
+  ],
   "scripts": {
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
@@ -31,11 +33,13 @@
     "@babel/core": "7.6.0",
     "@babel/node": "7.6.1",
     "@babel/preset-env": "7.6.0",
+    "readline-sync": "1.4.10"
+  },
+  "devDependencies": {
     "babel-eslint": "10.0.3",
     "eslint": "6.3.0",
     "eslint-config-airbnb-base": "14.0.0",
     "eslint-plugin-babel": "5.3.0",
-    "eslint-plugin-import": "2.18.2",
-    "readline-sync": "1.4.10"
+    "eslint-plugin-import": "2.18.2"
   }
 }
