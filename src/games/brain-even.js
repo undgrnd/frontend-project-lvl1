@@ -6,8 +6,8 @@ const RULES_DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer 
 
 const askQuestion = () => {
   const number = getRandomNumber(1, 100);
-  const isNumberEven = number % 2 === 0;
-  const correctAnswer = isNumberEven ? 'yes' : 'no';
+  const isEven = number % 2 === 0;
+  const correctAnswer = isEven ? 'yes' : 'no';
   const userAnswer = readlineSync.question(`Question: ${number} `);
 
   return {
