@@ -3,9 +3,10 @@ import getRandomNumber from '../get-random-number';
 import game from '../game';
 
 const RULES_DESCRIPTION = 'What number is missing in the progression?';
+const PROGRESSION_LENGTH = 10;
 
 const createProgression = () => {
-  const progression = [...Array(10).keys()];
+  const progression = [...Array(PROGRESSION_LENGTH).keys()];
   const hiddenNumber = progression[getRandomNumber(0, progression.length - 1)];
   progression[progression.indexOf(hiddenNumber)] = '..';
 
