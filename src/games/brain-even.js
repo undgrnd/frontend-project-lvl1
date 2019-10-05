@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandomNumber } from '../helpers';
+import getRandomNumber from '../get-random-number';
 import game from '../game';
 
 const RULES_DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
