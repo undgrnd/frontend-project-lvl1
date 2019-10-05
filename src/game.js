@@ -4,12 +4,6 @@ const saluteUser = () => {
   console.log('Welcome to the Brain Games!');
 };
 
-const getUserName = () => {
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-  return userName;
-};
-
 const getResultOfGame = (askQuestion) => {
   let count = 0;
   let isGameContinue = true;
@@ -33,7 +27,8 @@ const getResultOfGame = (askQuestion) => {
 export default (rules, askQuestion) => {
   saluteUser();
   console.log(rules);
-  const userName = getUserName();
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
   const gameResult = getResultOfGame(askQuestion);
   if (gameResult) {
     console.log(`Congratulations, ${userName}!`);
