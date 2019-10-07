@@ -1,8 +1,8 @@
 install: ;@echo "Install"; \
-		npm install
+	npm install
 
 publish: ;@echo "Publish"; \
-		npm publish
+	npm publish
 
 lint: ;@echo "Lint"; \
-		npm run lint .
+	npm run lint .
