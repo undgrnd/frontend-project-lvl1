@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import getRandomNumber from '../get-random-number';
 import game from '../game';
 
-const RULES_DESCRIPTION = 'What is the result of the expression?';
+const GAME_DESCRIPTION = 'What is the result of the expression?';
 const OPERATIONS_OF_QUESTION = ['+', '-', '*'];
 
 const askQuestion = () => {
@@ -37,5 +37,5 @@ const askQuestion = () => {
 };
 
 export default () => {
-  game(RULES_DESCRIPTION, askQuestion);
+  game(GAME_DESCRIPTION, askQuestion);
 };

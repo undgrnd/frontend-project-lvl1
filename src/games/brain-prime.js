@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import getRandomNumber from '../get-random-number';
 import game from '../game';
 
-const RULES_DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const GAME_DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isNumberPrime = (number) => {
   if (number === -1 || number === 0 || number === 1) return false;
@@ -27,5 +27,5 @@ const askQuestion = () => {
 };
 
 export default () => {
-  game(RULES_DESCRIPTION, askQuestion);
+  game(GAME_DESCRIPTION, askQuestion);
 };

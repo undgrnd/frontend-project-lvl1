@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import getRandomNumber from '../get-random-number';
 import game from '../game';
 
-const RULES_DESCRIPTION = 'What number is missing in the progression?';
+const GAME_DESCRIPTION = 'What number is missing in the progression?';
 const PROGRESSION_LENGTH = 10;
 
 const createProgression = () => {
@@ -32,5 +32,5 @@ const askQuestion = () => {
 };
 
 export default () => {
-  game(RULES_DESCRIPTION, askQuestion);
+  game(GAME_DESCRIPTION, askQuestion);
 };
