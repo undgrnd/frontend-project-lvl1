@@ -9,7 +9,7 @@ const askQuestion = () => {
   const number1 = getRandomNumber(1, 10);
   const number2 = getRandomNumber(1, 10);
   const operationOfQuestion = OPERATIONS_OF_QUESTION[
-    getRandomNumber(0, OPERATIONS_OF_QUESTION.length)
+    getRandomNumber(0, OPERATIONS_OF_QUESTION.length - 1)
   ];
 
   let correctAnswer;
