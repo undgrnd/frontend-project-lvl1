@@ -4,10 +4,11 @@ import game from '../game';
 
 const GAME_DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
+const isEven = (number) => number % 2 === 0;
+
 const askQuestion = () => {
   const question = getRandomNumber(1, 100);
-  const isEven = question % 2 === 0;
-  const correctAnswer = isEven ? 'yes' : 'no';
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
   const userAnswer = readlineSync.question(`Question: ${question} `);
 
   return {
