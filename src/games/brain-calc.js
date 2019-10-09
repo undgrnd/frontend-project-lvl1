@@ -24,7 +24,7 @@ const askQuestion = () => {
       correctAnswer = number1 * number2;
       break;
     default:
-      correctAnswer = number1 + number2;
+      correctAnswer = null;
   }
 
   const userAnswer = parseInt(readlineSync.question(`Question: ${number1} ${operationOfQuestion} ${number2} `), 10);
