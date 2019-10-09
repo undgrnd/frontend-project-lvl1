@@ -3,13 +3,13 @@ import getRandomNumber from '../get-random-number';
 import game from '../game';
 
 const GAME_DESCRIPTION = 'What is the result of the expression?';
-const OPERATIONS_OF_QUESTION = ['+', '-', '*'];
+const OPERATIONS_LIST = ['+', '-', '*'];
 
 const askQuestion = () => {
   const number1 = getRandomNumber(1, 10);
   const number2 = getRandomNumber(1, 10);
-  const operationOfQuestion = OPERATIONS_OF_QUESTION[
-    getRandomNumber(0, OPERATIONS_OF_QUESTION.length - 1)
+  const operationOfQuestion = OPERATIONS_LIST[
+    getRandomNumber(0, OPERATIONS_LIST.length - 1)
   ];
 
   let correctAnswer;
