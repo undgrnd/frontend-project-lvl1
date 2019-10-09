@@ -5,7 +5,7 @@ import game from '../game';
 const GAME_DESCRIPTION = 'What number is missing in the progression?';
 const PROGRESSION_LENGTH = 10;
 
-const createProgression = () => {
+const createQuestion = () => {
   const progression = [...Array(PROGRESSION_LENGTH).keys()];
   const hiddenNumber = progression[getRandomNumber(0, progression.length - 1)];
   progression[progression.indexOf(hiddenNumber)] = '..';
@@ -20,7 +20,7 @@ const askQuestion = () => {
   const {
     progression,
     hiddenNumber: correctAnswer,
-  } = createProgression();
+  } = createQuestion();
 
   const userAnswer = parseInt(readlineSync.question(`Question: ${progression} `), 10);
 
