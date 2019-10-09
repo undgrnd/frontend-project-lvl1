@@ -5,4 +5,4 @@ publish: ;@echo "Publish"; \
 	npm publish
 
 lint: ;@echo "Lint"; \
-	npm run lint .
+	npm run lint
