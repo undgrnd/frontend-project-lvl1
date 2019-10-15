@@ -2,9 +2,9 @@ import readlineSync from 'readline-sync';
 import getRandomNumber from '../get-random-number';
 import game from '../game';
 
-const GAME_DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const isNumberPrime = (number) => {
+const isPrime = (number) => {
   if (number <= 1) return false;
   for (let i = 2; i <= Math.sqrt(number); i += 1) {
     if (number % i === 0) {
@@ -15,9 +15,9 @@ const isNumberPrime = (number) => {
 };
 
 const askQuestion = () => {
-  const number = getRandomNumber(1, 100);
-  const correctAnswer = isNumberPrime(number) ? 'yes' : 'no';
-  const userAnswer = readlineSync.question(`Question: ${number} `);
+  const questionNumber = getRandomNumber(1, 100);
+  const correctAnswer = isPrime(questionNumber) ? 'yes' : 'no';
+  const userAnswer = readlineSync.question(`Question: ${questionNumber} `);
 
   return {
     isUserRight: correctAnswer === userAnswer,
@@ -27,5 +27,5 @@ const askQuestion = () => {
 };
 
 export default () => {
-  game(GAME_DESCRIPTION, askQuestion);
+  game(gameDescription, askQuestion);
 };

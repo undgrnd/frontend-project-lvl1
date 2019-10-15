@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import getRandomNumber from '../get-random-number';
 import game from '../game';
 
-const GAME_DESCRIPTION = 'What is the result of the expression?';
+const gameDescription = 'What is the result of the expression?';
 
 const getGcd = (n1, n2) => {
   const largest = Math.max(n1, n2);
@@ -30,5 +30,5 @@ const askQuestion = () => {
 };
 
 export default () => {
-  game(GAME_DESCRIPTION, askQuestion);
+  game(gameDescription, askQuestion);
 };

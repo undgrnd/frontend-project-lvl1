@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import getRandomNumber from '../get-random-number';
 import game from '../game';
 
-const GAME_DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
+const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (number) => number % 2 === 0;
 
@@ -19,5 +19,5 @@ const askQuestion = () => {
 };
 
 export default () => {
-  game(GAME_DESCRIPTION, askQuestion);
+  game(gameDescription, askQuestion);
 };

@@ -1,5 +1,7 @@
 import readlineSync from 'readline-sync';
 
+const questionsCount = 3;
+
 const getResultOfGame = (askQuestion) => {
   let count = 0;
   let isGameContinue = true;
@@ -14,10 +16,10 @@ const getResultOfGame = (askQuestion) => {
     }
 
     count = isUserRight ? count + 1 : NaN;
-    isGameContinue = count < 3 && !Number.isNaN(count);
+    isGameContinue = count < questionsCount && !Number.isNaN(count);
   }
 
-  return count === 3;
+  return count === questionsCount;
 };
 
 export default (rules, askQuestion) => {
