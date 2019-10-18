@@ -1,8 +1,9 @@
-import readlineSync from 'readline-sync';
 import getRandomNumber from '../get-random-number';
 import game from '../game';
 
 const gameDescription = 'What is the result of the expression?';
+
+const normalizeUserAnswer = (answer) => parseInt(answer, 10);
 
 const getGcd = (n1, n2) => {
   const largest = Math.max(n1, n2);
@@ -18,17 +19,16 @@ const getGcd = (n1, n2) => {
 const askQuestion = () => {
   const number1 = getRandomNumber(1, 100);
   const number2 = getRandomNumber(1, 100);
-  const correctAnswer = getGcd(number1, number2);
+  const answer = getGcd(number1, number2);
 
-  const userAnswer = parseInt(readlineSync.question(`Question: ${number1} ${number2} `), 10);
+  const question = `Question: ${number1} ${number2} `;
 
   return {
-    isUserRight: correctAnswer === userAnswer,
-    userAnswer,
-    correctAnswer,
+    question,
+    answer,
   };
 };
 
 export default () => {
-  game(gameDescription, askQuestion);
+  game(gameDescription, askQuestion, normalizeUserAnswer);
 };

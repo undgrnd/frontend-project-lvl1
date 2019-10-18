@@ -1,9 +1,10 @@
-import readlineSync from 'readline-sync';
 import getRandomNumber from '../get-random-number';
 import game from '../game';
 
 const gameDescription = 'What is the result of the expression?';
 const operations = ['+', '-', '*'];
+
+const normalizeUserAnswer = (answer) => parseInt(answer, 10);
 
 const askQuestion = () => {
   const number1 = getRandomNumber(1, 10);
@@ -12,30 +13,29 @@ const askQuestion = () => {
     getRandomNumber(0, operations.length - 1)
   ];
 
-  let correctAnswer;
+  let answer;
   switch (operation) {
     case '+':
-      correctAnswer = number1 + number2;
+      answer = number1 + number2;
       break;
     case '-':
-      correctAnswer = number1 - number2;
+      answer = number1 - number2;
       break;
     case '*':
-      correctAnswer = number1 * number2;
+      answer = number1 * number2;
       break;
     default:
-      correctAnswer = null;
+      answer = null;
   }
 
-  const userAnswer = parseInt(readlineSync.question(`Question: ${number1} ${operation} ${number2} `), 10);
+  const question = `Question: ${number1} ${operation} ${number2} `;
 
   return {
-    isUserRight: correctAnswer === userAnswer,
-    userAnswer,
-    correctAnswer,
+    question,
+    answer,
   };
 };
 
 export default () => {
-  game(gameDescription, askQuestion);
+  game(gameDescription, askQuestion, normalizeUserAnswer);
 };

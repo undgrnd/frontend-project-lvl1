@@ -1,9 +1,10 @@
-import readlineSync from 'readline-sync';
 import getRandomNumber from '../get-random-number';
 import game from '../game';
 
 const gameDescription = 'What number is missing in the progression?';
 const PROGRESSION_LENGTH = 10;
+
+const normalizeUserAnswer = (answer) => parseInt(answer, 10);
 
 const createQuestion = () => {
   const progression = [...Array(PROGRESSION_LENGTH).keys()];
@@ -19,18 +20,15 @@ const createQuestion = () => {
 const askQuestion = () => {
   const {
     progression,
-    correctAnswer,
+    correctAnswer: answer,
   } = createQuestion();
 
-  const userAnswer = parseInt(readlineSync.question(`Question: ${progression} `), 10);
-
   return {
-    isUserRight: correctAnswer === userAnswer,
-    userAnswer,
-    correctAnswer,
+    question: progression,
+    answer,
   };
 };
 
 export default () => {
-  game(gameDescription, askQuestion);
+  game(gameDescription, askQuestion, normalizeUserAnswer);
 };
