@@ -17,10 +17,8 @@ const getQuestionAndAnswer = () => {
   const question = getRandomNumber(1, 100);
   const answer = isPrime(question) ? 'yes' : 'no';
 
-  const questionText = `Question: ${question} `;
-
   return {
-    question: questionText,
+    question,
     answer,
   };
 };

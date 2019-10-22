@@ -28,7 +28,7 @@ const getQuestionAndAnswer = () => {
       answer = null;
   }
 
-  const question = `Question: ${number1} ${operation} ${number2} `;
+  const question = `${number1} ${operation} ${number2} `;
 
   return {
     question,

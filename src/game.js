@@ -9,7 +9,7 @@ const getResultOfGame = (getQuestionAndAnswer, normalizeUserAnswer) => {
   while (isGameContinue) {
     const { question, answer } = getQuestionAndAnswer();
 
-    const userAnswer = readlineSync.question(question);
+    const userAnswer = readlineSync.question(`Question: ${question} `);
     const normalizedUserAnswer = normalizeUserAnswer
       ? normalizeUserAnswer(userAnswer) : userAnswer;
 
