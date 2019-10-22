@@ -14,10 +14,10 @@ const isPrime = (number) => {
 };
 
 const getQuestionAndAnswer = () => {
-  const questionNumber = getRandomNumber(1, 100);
-  const answer = isPrime(questionNumber) ? 'yes' : 'no';
+  const question = getRandomNumber(1, 100);
+  const answer = isPrime(question) ? 'yes' : 'no';
 
-  const questionText = `Question: ${questionNumber} `;
+  const questionText = `Question: ${question} `;
 
   return {
     question: questionText,

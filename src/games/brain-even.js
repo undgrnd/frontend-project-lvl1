@@ -6,10 +6,10 @@ const gameDescription = 'Answer "yes" if the number is even, otherwise answer "n
 const isEven = (number) => number % 2 === 0;
 
 const getQuestionAndAnswer = () => {
-  const questionNumber = getRandomNumber(1, 100);
-  const answer = isEven(questionNumber) ? 'yes' : 'no';
+  const question = getRandomNumber(1, 100);
+  const answer = isEven(question) ? 'yes' : 'no';
 
-  const questionText = `Question: ${questionNumber} `;
+  const questionText = `Question: ${question} `;
 
   return {
     question: questionText,
