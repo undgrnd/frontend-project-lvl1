@@ -28,9 +28,9 @@ const getResultOfGame = (getQuestionAndAnswer, normalizeUserAnswer) => {
   return count === questionsCount;
 };
 
-export default (rules, getQuestionAndAnswer, normalizeUserAnswer) => {
+export default (rule, getQuestionAndAnswer, normalizeUserAnswer) => {
   console.log('Welcome to the Brain Games!');
-  console.log(rules);
+  console.log(rule);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   const gameResult = getResultOfGame(getQuestionAndAnswer, normalizeUserAnswer);
