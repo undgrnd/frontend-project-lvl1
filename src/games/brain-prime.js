@@ -13,7 +13,7 @@ const isPrime = (number) => {
   return true;
 };
 
-const askQuestion = () => {
+const getQuestionAndAnswer = () => {
   const questionNumber = getRandomNumber(1, 100);
   const answer = isPrime(questionNumber) ? 'yes' : 'no';
 
@@ -26,5 +26,5 @@ const askQuestion = () => {
 };
 
 export default () => {
-  game(gameDescription, askQuestion);
+  game(gameDescription, getQuestionAndAnswer);
 };

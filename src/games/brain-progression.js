@@ -17,7 +17,7 @@ const createQuestion = () => {
   };
 };
 
-const askQuestion = () => {
+const getQuestionAndAnswer = () => {
   const {
     progression,
     correctAnswer: answer,
@@ -30,5 +30,5 @@ const askQuestion = () => {
 };
 
 export default () => {
-  game(gameDescription, askQuestion, normalizeUserAnswer);
+  game(gameDescription, getQuestionAndAnswer, normalizeUserAnswer);
 };

@@ -16,7 +16,7 @@ const getGcd = (n1, n2) => {
   return getGcd(remainder, least);
 };
 
-const askQuestion = () => {
+const getQuestionAndAnswer = () => {
   const number1 = getRandomNumber(1, 100);
   const number2 = getRandomNumber(1, 100);
   const answer = getGcd(number1, number2);
@@ -30,5 +30,5 @@ const askQuestion = () => {
 };
 
 export default () => {
-  game(gameDescription, askQuestion, normalizeUserAnswer);
+  game(gameDescription, getQuestionAndAnswer, normalizeUserAnswer);
 };

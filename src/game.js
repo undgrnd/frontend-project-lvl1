@@ -2,12 +2,12 @@ import readlineSync from 'readline-sync';
 
 const questionsCount = 3;
 
-const getResultOfGame = (askQuestion, normalizeUserAnswer) => {
+const getResultOfGame = (getQuestionAndAnswer, normalizeUserAnswer) => {
   let count = 0;
   let isGameContinue = true;
 
   while (isGameContinue) {
-    const { question, answer } = askQuestion();
+    const { question, answer } = getQuestionAndAnswer();
 
     const userAnswer = readlineSync.question(question);
     const normalizedUserAnswer = normalizeUserAnswer
@@ -28,12 +28,12 @@ const getResultOfGame = (askQuestion, normalizeUserAnswer) => {
   return count === questionsCount;
 };
 
-export default (rules, askQuestion, normalizeUserAnswer) => {
+export default (rules, getQuestionAndAnswer, normalizeUserAnswer) => {
   console.log('Welcome to the Brain Games!');
   console.log(rules);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  const gameResult = getResultOfGame(askQuestion, normalizeUserAnswer);
+  const gameResult = getResultOfGame(getQuestionAndAnswer, normalizeUserAnswer);
   if (gameResult) {
     console.log(`Congratulations, ${userName}!`);
   }

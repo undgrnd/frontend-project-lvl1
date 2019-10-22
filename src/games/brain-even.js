@@ -5,7 +5,7 @@ const gameDescription = 'Answer "yes" if the number is even, otherwise answer "n
 
 const isEven = (number) => number % 2 === 0;
 
-const askQuestion = () => {
+const getQuestionAndAnswer = () => {
   const questionNumber = getRandomNumber(1, 100);
   const answer = isEven(questionNumber) ? 'yes' : 'no';
 
@@ -18,5 +18,5 @@ const askQuestion = () => {
 };
 
 export default () => {
-  game(gameDescription, askQuestion);
+  game(gameDescription, getQuestionAndAnswer);
 };

@@ -6,7 +6,7 @@ const operations = ['+', '-', '*'];
 
 const normalizeUserAnswer = (answer) => parseInt(answer, 10);
 
-const askQuestion = () => {
+const getQuestionAndAnswer = () => {
   const number1 = getRandomNumber(1, 10);
   const number2 = getRandomNumber(1, 10);
   const operation = operations[
@@ -37,5 +37,5 @@ const askQuestion = () => {
 };
 
 export default () => {
-  game(gameDescription, askQuestion, normalizeUserAnswer);
+  game(gameDescription, getQuestionAndAnswer, normalizeUserAnswer);
 };
