@@ -5,4 +5,4 @@ publish:
 	npm publish
 
 lint:
-	npm run lint
+	npx eslint ./ --cache --config ./.eslintrc.yml
