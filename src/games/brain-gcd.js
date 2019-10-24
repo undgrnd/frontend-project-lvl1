@@ -3,8 +3,6 @@ import game from '../game';
 
 const gameDescription = 'What is the result of the expression?';
 
-const normalizeUserAnswer = (answer) => parseInt(answer, 10);
-
 const getGcd = (n1, n2) => {
   const largest = Math.max(n1, n2);
   const least = Math.min(n1, n2);
@@ -25,10 +23,10 @@ const getQuestionAndAnswer = () => {
 
   return {
     question,
-    answer,
+    answer: parseInt(answer, 10),
   };
 };
 
 export default () => {
-  game(gameDescription, getQuestionAndAnswer, normalizeUserAnswer);
+  game(gameDescription, getQuestionAndAnswer);
 };

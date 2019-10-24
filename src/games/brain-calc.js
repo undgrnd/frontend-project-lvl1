@@ -4,8 +4,6 @@ import game from '../game';
 const gameDescription = 'What is the result of the expression?';
 const operations = ['+', '-', '*'];
 
-const normalizeUserAnswer = (answer) => parseInt(answer, 10);
-
 const getQuestionAndAnswer = () => {
   const number1 = getRandomNumber(1, 10);
   const number2 = getRandomNumber(1, 10);
@@ -37,5 +35,5 @@ const getQuestionAndAnswer = () => {
 };
 
 export default () => {
-  game(gameDescription, getQuestionAndAnswer, normalizeUserAnswer);
+  game(gameDescription, getQuestionAndAnswer);
 };
