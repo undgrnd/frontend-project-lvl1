@@ -11,7 +11,7 @@ const getQuestionAndAnswer = () => {
 
   return {
     question: progression,
-    answer: parseInt(answer, 10),
+    answer: answer.toString(),
   };
 };
 

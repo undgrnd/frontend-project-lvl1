@@ -23,7 +23,7 @@ const getQuestionAndAnswer = () => {
 
   return {
     question,
-    answer: parseInt(answer, 10),
+    answer: answer.toString(),
   };
 };
 

@@ -16,7 +16,7 @@ export default (rule, getQuestionAndAnswer) => {
 
     const userAnswer = readlineSync.question(`Question: ${question} `);
 
-    const isUserRight = answer.toString() === userAnswer;
+    const isUserRight = answer === userAnswer;
 
     if (isUserRight) {
       console.log('Correct!');

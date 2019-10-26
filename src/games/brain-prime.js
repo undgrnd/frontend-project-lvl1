@@ -19,7 +19,7 @@ const getQuestionAndAnswer = () => {
 
   return {
     question,
-    answer,
+    answer: answer.toString(),
   };
 };
 
