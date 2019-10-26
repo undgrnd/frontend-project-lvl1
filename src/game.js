@@ -9,8 +9,6 @@ export default (rule, getQuestionAndAnswer) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
-  let count = 0;
-
   for (let attempt = 0; attempt < questionsCount; attempt += 1) {
     const { question, answer } = getQuestionAndAnswer();
 
@@ -20,14 +18,11 @@ export default (rule, getQuestionAndAnswer) => {
 
     if (isUserRight) {
       console.log('Correct!');
-      count = isUserRight && count + 1;
     } else {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${answer}.`);
-      break;
+      return;
     }
   }
 
-  if (count === questionsCount) {
-    console.log(`Congratulations, ${userName}!`);
-  }
+  console.log(`Congratulations, ${userName}!`);
 };
